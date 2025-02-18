@@ -1,4 +1,4 @@
-# Simple Ensemble Learning - Group 7
+# Simple Ensemble Learning
 
 ## Overview
 This repository provides a tutorial on ensemble learning, covering key techniques such as bagging, boosting, and stacking. It demonstrates how to implement these methods using R.
@@ -7,7 +7,6 @@ This repository provides a tutorial on ensemble learning, covering key technique
 - Hang Ye
 - Minghao Zhang
 - Lily Yuan
-- Jiang Yi
 
 ## Table of Contents
 1. [Installation](#installation)
