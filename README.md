@@ -1,12 +1,40 @@
----
-title: "simpleEnsembleGroup7_Tutorial"
-author: "Hang Ye, Minghao Zhang, Lily Yuan, Jiang Yi"
-date: "2024-05-02"
-output: html_document
----
+# Ensemble Learning R Package
 
-```rknitr::opts_chunk$set(echo = TRUE)
-```
+## Quick start
+
+### Step 1: Prepare the Package:
+Ensure the package is in a format that R can install (folder ready, tar.gz for source packages, .zip for Windows binary packages, .tgz for macOS binary packages).
+Optionally, compress the package folder into the required format.
+
+### Step 2: Locate the Package Folder:
+Determine the path to the package folder on your computer.
+
+### Step 3: Install the Package in R:
+- Open R or RStudio.
+Use the `install.packages()` function with the `repos = NULL` argument and the correct type argument for the package format.
+
+> Example for folder ready:
+
+`rinstall.packages("/path/to/package", repos = NULL, type = "source")`
+
+> Example for Source Package:
+ 
+ `rinstall.packages("/path/to/package.tar.gz", repos = NULL, type = "source")`
+ 
+> Example for Windows Binary Package:
+
+`rinstall.packages("/path/to/package.zip", repos = NULL, type = "win.binary")`
+
+> Example for macOS Binary Package:
+
+`rinstall.packages("/path/to/package.tgz", repos = NULL, type = "mac.binary")`
+
+### Step 4: Verify Installation:
+Load the installed package using the `library()` function.
+Verify that the package loads without errors.
+
+`rlibrary(EnsembleLearning)` 
+
 
 ## Contents
 1. [Installation]
@@ -41,57 +69,7 @@ library(glmnet)
 
 ## Installation
 
-### Step 1: Prepare the Package:
-  Ensure the package is in a format that R can install (folder ready, tar.gz for source packages, .zip for Windows binary packages, .tgz for macOS binary packages).
-Optionally, compress the package folder into the required format.
 
-### Step 2: Locate the Package Folder:
-  Determine the path to the package folder on your computer.
-
-### Step 3: Install the Package:
-  Open R or RStudio.
-Use the install.packages() function with the repos = NULL argument and the correct type argument for the package format.
-
-Example for folder ready:
-```rinstall.packages("/path/to/package", repos = NULL, type = "source")  
-```
-Example for Source Package:  
-```rinstall.packages("/path/to/package.tar.gz", repos = NULL, type = "source")
-```
-Example for Windows Binary Package:
-```rinstall.packages("/path/to/package.zip", repos = NULL, type = "win.binary")
-```
-Example for macOS Binary Package:
-```rinstall.packages("/path/to/package.tgz", repos = NULL, type = "mac.binary")
-```
-For every "/path/to/package.":
-+ [/path/to] is the whole path name where the folder is on your device.\
-  
-+ For Windows, using File Explorer:\
-      1. Navigate to the folder containing your package.\
-      2. Click on the address bar to display the full path.\
-      3. Right-click on the path and choose "Copy address as text."\
-      4. You can now paste the full path (Ctrl+V) where needed.\
-      
-+ For macOS, using Finder:\
-      1. Open Finder and navigate to the folder containing your package.\
-      2. Right-click on the folder and hold the Option key. \
-      3. You should see the "Copy [FolderName] as Pathname" option.\
-      4. Click on it to copy the full path.\
-
-+ [/package] is our package names.\
-    Here is /simpleEnsembleGroup7. (do not forget"/")\
-    
-+ After [.] is the format of different compress method. \
-  For most cases, "zip" is the common compress format for Windows; "tgz" or "zip" is the common compress format for macOS.\
-  If you already have the folder like other folders on your device, just ignore the [.].\
-
-
-### Step 4: Verify Installation:
-Load the installed package using the library() function.
-Verify that the package loads without errors.
-
-```rlibrary(simpleEnsembleGroup7)
 ```
 ## Introduction
 The function simpleEnsembleGroup7 implements various regression models and it is able to apply different tasks, including bagging, pre-screen for top informative predictors, and ensemble learning.For quick start,click [here](#quickstart)
